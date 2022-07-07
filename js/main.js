@@ -42,7 +42,9 @@ console.log(typeof obj)
 
 if ((typeof Object.values(person3)[4][0]) === "object" ) {
     console.log(true)
-    console.log((Object.values(person3)[4]).length)
+    let shakes = Object.values(Object.values(person3)[4][0])
+    console.log(shakes)
+    console.log((Object.values(person3)[4][0]).length)
 }
 
 let len = Object.keys(person3).length
@@ -59,6 +61,8 @@ function favoriteFood(person) {
             Object.values(person)[i].forEach( val => console.log(val) )
         } else if ( (typeof Object.values(person)[i][0]) === "object" ) {
             console.log(true)
+        } else {
+            console.log(Object.values(person)[i])
         }
     }
 }
