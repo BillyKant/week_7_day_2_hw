@@ -42,6 +42,14 @@ console.log(typeof obj)
 
 if ((typeof Object.values(person3)[4][0]) === "object" ) {
     console.log(true)
+    console.log((Object.values(person3)[4]).length)
+}
+
+let len = Object.keys(person3).length
+for (let i = 0; i < length; i++){
+    if ((typeof Object.values(person3)[i][0]) === "object") {
+        let len2 = Object.values(person3)[i][0].length
+    }
 }
 
 function favoriteFood(person) {
@@ -109,6 +117,40 @@ const moreThanTen = word => {
     })
 }
 
-moreThanTen(12)
+moreThanTen('qwertyuiopa')
 .then( (result) => console.log('Big Word'))
 .catch( (error) => console.log('Small Number'))
+
+
+// ---- CODE WARS PROBLEMS ---- \\
+
+/**
+ * Sum of positive
+ * You get an array of numbers, return the sum of all of the positives  ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+Note: if there is nothing to sum, the sum is default to 0.
+ */
+function positiveSum(arr) {
+    let len = arr.length
+    let posCount = 0
+    for (let i=0; i < len; i++){
+        if (arr[i] > 0) {
+        posCount += arr[i]
+        }
+    }
+    return posCount
+}
+
+/**
+ * Return Negative
+ * 
+ */
+
+let makeNegative = (num) => {
+    if (num > 0) {
+        num = num*-1
+    } 
+    return num
+}
